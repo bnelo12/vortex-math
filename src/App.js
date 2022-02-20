@@ -1,23 +1,40 @@
-import logo from './logo.svg';
 import './App.css';
 
+import Renderer from './components/renderer'
+import Menu from './components/menu'
+import Logo from './components/logo'
+import useAppState from './hooks/useAppState'
+import { ThemeProvider, createTheme } from '@mui/material/styles';
+
+
 function App() {
+
+  const appState = useAppState(
+    2000,
+    2,
+  )
+
+const theme = createTheme({
+  palette: {
+    mode: 'dark',
+  },
+});
+
+  const [modulus, setmodulus] = appState['modulus'];
+  const [multiplier, setMultiplier] = appState['multiplier'];
+  const [color_loops, setColorLoops] = appState['color_loops'];
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <ThemeProvider theme={theme}>
+      <Logo />
+      <Renderer modulus={modulus} multiplier={multiplier} color_loops={color_loops} />
+      <Menu
+        modulus_state={[modulus, setmodulus]}
+        multiplier_state={[multiplier, setMultiplier]}
+        color_loops_state={[color_loops, setColorLoops]}
+      />
+    </ThemeProvider>
     </div>
   );
 }
