@@ -1,0 +1,16 @@
+{
+  "files": {
+    "main.css": "/vortex-math/static/css/main.aed615b1.css",
+    "main.js": "/vortex-math/static/js/main.936d2d97.js",
+    "static/js/787.45887f36.chunk.js": "/vortex-math/static/js/787.45887f36.chunk.js",
+    "static/media/vortex_math_logo_white.png": "/vortex-math/static/media/vortex_math_logo_white.8fcd05ef12cfb466e5e5.png",
+    "index.html": "/vortex-math/index.html",
+    "main.aed615b1.css.map": "/vortex-math/static/css/main.aed615b1.css.map",
+    "main.936d2d97.js.map": "/vortex-math/static/js/main.936d2d97.js.map",
+    "787.45887f36.chunk.js.map": "/vortex-math/static/js/787.45887f36.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.aed615b1.css",
+    "static/js/main.936d2d97.js"
+  ]
+}
